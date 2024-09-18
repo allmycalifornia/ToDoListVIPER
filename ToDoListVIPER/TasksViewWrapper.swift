@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TasksViewWrapper: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        return TasksRouter.createModule() // VIPER-модуль
+        // Оборачиваем SwiftUI View в UIHostingController
+        let swiftUIView = TasksRouter.createTasksModule() // VIPER-модуль, который возвращает some View
+        return UIHostingController(rootView: swiftUIView) // Обернули в UIHostingController
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
