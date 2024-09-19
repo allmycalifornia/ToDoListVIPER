@@ -30,6 +30,7 @@ protocol PresenterToInteractorProtocol: AnyObject {
     func addTask(title: String, taskDescription: String)
     func deleteTask(task: TaskEntity)
     func updateTask(task: TaskEntity, title: String, taskDescription: String, isCompleted: Bool)
+    func fetchTasksFromAPI()
 }
 
 protocol InteractorToPresenterProtocol: AnyObject {

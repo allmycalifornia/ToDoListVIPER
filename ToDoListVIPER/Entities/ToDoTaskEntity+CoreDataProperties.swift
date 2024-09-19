@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-extension ToDoTaskEntity {
+extension TaskEntity {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskEntity> {
         return NSFetchRequest<TaskEntity>(entityName: "ToDoTaskEntity")
@@ -19,9 +19,6 @@ extension ToDoTaskEntity {
     @NSManaged public var isCompleted: Bool
     @NSManaged public var taskDescription: String?
     @NSManaged public var title: String?
-
-}
-
-extension ToDoTaskEntity : Identifiable {
+    @NSManaged public var apiId: Int32
 
 }

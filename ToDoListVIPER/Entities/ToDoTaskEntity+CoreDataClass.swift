@@ -10,6 +10,8 @@ import Foundation
 import CoreData
 
 @objc(ToDoTaskEntity)
-public class ToDoTaskEntity: NSManagedObject {
+public class TaskEntity: NSManagedObject {
 
 }
+
+extension TaskEntity: Identifiable {}
