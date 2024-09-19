@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8E8B94302C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B942E2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataClass.swift */; };
+		8E8B94312C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B942F2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8EF40BFC2C99852F00B81893 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E8B942E2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoTaskEntity+CoreDataClass.swift"; path = "ToDoListVIPER/ToDoTaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E8B942F2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoTaskEntity+CoreDataProperties.swift"; path = "ToDoListVIPER/ToDoTaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8EF40BE52C99852C00B81893 /* ToDoListVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF40BFB2C99852F00B81893 /* ToDoListVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF40C052C99852F00B81893 /* ToDoListVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,8 @@
 		8EF40BDC2C99852C00B81893 = {
 			isa = PBXGroup;
 			children = (
+				8E8B942E2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataClass.swift */,
+				8E8B942F2C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataProperties.swift */,
 				8EF40BE72C99852C00B81893 /* ToDoListVIPER */,
 				8EF40BFE2C99852F00B81893 /* ToDoListVIPERTests */,
 				8EF40C082C99852F00B81893 /* ToDoListVIPERUITests */,
@@ -237,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8B94302C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataClass.swift in Sources */,
+				8E8B94312C9C7ED3009BCABB /* ToDoTaskEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

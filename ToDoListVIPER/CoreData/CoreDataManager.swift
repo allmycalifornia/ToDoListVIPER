@@ -55,8 +55,10 @@ class CoreDataManager {
                 try context.save()
             } catch {
                 let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                print("Unresolved error \(nsError), \(nsError.userInfo)")
+                // Показ сообщения об ошибке пользователю
             }
         }
     }
 }
+

@@ -15,7 +15,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newTask = TaskEntity(context: viewContext)
+            let newTask = ToDoTaskEntity(context: viewContext)
             newTask.title = "Sample Task"
             newTask.taskDescription = "This is a sample task for preview purposes"
             newTask.isCompleted = false
@@ -35,7 +35,7 @@ struct PersistenceController {
 
     // Инициализация контроллера
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "TasksDataModel") // Убедитесь, что имя совпадает с моделью CoreData
+        container = NSPersistentContainer(name: "TasksDataModel")
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }

@@ -13,12 +13,12 @@ protocol ViewToPresenterProtocol: AnyObject {
     var router: PresenterToRouterProtocol? { get set }
     func startFetchingTasks()
     func addTask(title: String, taskDescription: String)
-    func deleteTask(task: TaskEntity)
-    func updateTask(task: TaskEntity, title: String, taskDescription: String, isCompleted: Bool)
+    func deleteTask(task: ToDoTaskEntity)
+    func updateTask(task: ToDoTaskEntity, title: String, taskDescription: String, isCompleted: Bool)
 }
 
 protocol PresenterToViewProtocol: AnyObject {
-    func showTasks(tasks: [TaskEntity])
+    func showTasks(tasks: [ToDoTaskEntity])
     func showError()
 }
 
@@ -28,12 +28,12 @@ protocol PresenterToInteractorProtocol: AnyObject {
     var presenter: InteractorToPresenterProtocol? { get set }
     func fetchTasks()
     func addTask(title: String, taskDescription: String)
-    func deleteTask(task: TaskEntity)
-    func updateTask(task: TaskEntity, title: String, taskDescription: String, isCompleted: Bool)
+    func deleteTask(task: ToDoTaskEntity)
+    func updateTask(task: ToDoTaskEntity, title: String, taskDescription: String, isCompleted: Bool)
     func fetchTasksFromAPI()
 }
 
 protocol InteractorToPresenterProtocol: AnyObject {
-    func tasksFetchedSuccess(tasks: [TaskEntity])
+    func tasksFetchedSuccess(tasks: [ToDoTaskEntity])
     func tasksFetchedFailed()
 }
