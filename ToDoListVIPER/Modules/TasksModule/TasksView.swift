@@ -44,7 +44,7 @@ struct TasksView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .navigationTitle("Tasks")
+            .navigationTitle("Today's Tasks")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {

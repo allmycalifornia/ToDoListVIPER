@@ -33,9 +33,9 @@ class TasksAPIService {
             }
             
             do {
-                let decodedData = try JSONDecoder().decode([ToDoItem].self, from: data)
-                print("Fetched tasks from API: \(decodedData)")
-                completion(decodedData)
+                let decodedData = try JSONDecoder().decode(ToDoResponse.self, from: data)
+                print("Fetched tasks from API: \(decodedData.todos)")
+                completion(decodedData.todos)
             } catch {
                 print("Failed to decode tasks: \(error)")
                 completion(nil)
@@ -45,7 +45,7 @@ class TasksAPIService {
         task.resume()
     }
 }
-    
+
 struct ToDoResponse: Codable {
     let todos: [ToDoItem]
 }
