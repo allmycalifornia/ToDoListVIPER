@@ -11,11 +11,6 @@ import CoreData
 class TasksInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
     
-//    func fetchTasks() {
-//        let tasks = fetchTasksFromCoreData() // или fetchTasksFromAPI()
-//        presenter?.tasksFetchedSuccess(tasks: tasks)
-//    }
-    
     func fetchTasks() {
         fetchTasksFromAPI()
     }
@@ -25,10 +20,8 @@ class TasksInteractor: PresenterToInteractorProtocol {
             guard let self = self else { return }
             
             if let tasks = tasks {
-                // Сохраняем задачи из API в CoreData
                 self.saveTasksToCoreData(apiTasks: tasks)
             } else {
-                // Если задачи не загружены из API, загружаем их из CoreData
                 let coreDataTasks = self.fetchTasksFromCoreData()
                 self.presenter?.tasksFetchedSuccess(tasks: coreDataTasks)
             }
@@ -77,14 +70,6 @@ class TasksInteractor: PresenterToInteractorProtocol {
             self.fetchTasks()
         }
     }
-    
-//    func fetchTasksFromAPI() {
-//        TasksAPIService.shared.fetchTasks { [weak self] tasks in
-//            guard let self = self, let tasks = tasks else { return }
-//
-//            self.saveTasksToCoreData(apiTasks: tasks)
-//        }
-//    }
 
     private func saveTasksToCoreData(apiTasks: [ToDoItem]) {
         apiTasks.forEach { apiTask in

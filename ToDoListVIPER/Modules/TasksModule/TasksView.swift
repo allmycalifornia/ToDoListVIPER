@@ -17,12 +17,80 @@ struct TasksView: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack {
+                    Text("Today's Tasks")
+                        .font(.largeTitle)
+                        .bold()
+
+                    Spacer()
+
+                    Button(action: {
+                        showingAddTaskSheet.toggle()
+                    }) {
+                        HStack {
+                            Image(systemName: "plus")
+                            Text("New Task")
+                        }
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(Color.blue.opacity(0.1))
+                        .cornerRadius(12)
+                    }
+                }
+                .padding([.leading, .trailing])
+
+                // Строка с датой
+                HStack {
+                    Text(currentDateFormatted())
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+                .padding(.leading)
+
+                // Блок с количеством задач (All, Open, Closed)
+                HStack(spacing: 20) {
+                    HStack {
+                        Text("All")
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                        Text("\(presenter.tasks.count)")
+                            .font(.subheadline)
+                            .foregroundColor(.blue)
+                    }
+                    HStack {
+                        Text("|")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                    }
+                    HStack {
+                        Text("Open")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                        Text("\(countOpenTasks())")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    HStack {
+                        Text("Closed")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                        Text("\(countClosedTasks())")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                }
+                .padding(.top)
+                
+                // Список задач
                 List {
                     ForEach(presenter.tasks, id: \.self) { task in
                         HStack {
                             VStack(alignment: .leading) {
                                 Text(task.title ?? "No Title")
                                     .font(.headline)
+                                    .strikethrough(task.isCompleted) // Добавим зачеркивание для выполненных задач
                                 Text(task.taskDescription ?? "No Description")
                                     .font(.subheadline)
                                 if let createdAt = task.createdAt {
@@ -44,14 +112,10 @@ struct TasksView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .navigationTitle("Today's Tasks")
+            .navigationTitle("")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showingAddTaskSheet.toggle()
-                    }) {
-                        Image(systemName: "plus")
-                    }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("")
                 }
             }
             .sheet(isPresented: $showingAddTaskSheet) {
@@ -114,5 +178,21 @@ struct TasksView: View {
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         return formatter.string(from: date)
+    }
+
+    func currentDateFormatted() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, dd MMMM"
+        return formatter.string(from: Date())
+    }
+
+    // Подсчет открытых задач
+    func countOpenTasks() -> Int {
+        return presenter.tasks.filter { !$0.isCompleted }.count
+    }
+
+    // Подсчет закрытых задач
+    func countClosedTasks() -> Int {
+        return presenter.tasks.filter { $0.isCompleted }.count
     }
 }
