@@ -10,7 +10,6 @@ import CoreData
 struct PersistenceController {
     static let shared = PersistenceController()
 
-    // Пример данных для режима предпросмотра (Preview)
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
@@ -30,10 +29,8 @@ struct PersistenceController {
         return result
     }()
 
-    // NSPersistentContainer для работы с CoreData
     let container: NSPersistentContainer
 
-    // Инициализация контроллера
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "TasksDataModel")
         if inMemory {
