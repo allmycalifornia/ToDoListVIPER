@@ -40,7 +40,6 @@ struct TasksView: View {
                 }
                 .padding([.leading, .trailing])
 
-                // Строка с датой
                 HStack {
                     Text(currentDateFormatted())
                         .font(.subheadline)
@@ -49,7 +48,6 @@ struct TasksView: View {
                 }
                 .padding(.leading)
 
-                // Блок с количеством задач (All, Open, Closed)
                 HStack(spacing: 20) {
                     HStack {
                         Text("All")
@@ -83,14 +81,13 @@ struct TasksView: View {
                 }
                 .padding(.top)
                 
-                // Список задач
                 List {
                     ForEach(presenter.tasks, id: \.self) { task in
                         HStack {
                             VStack(alignment: .leading) {
                                 Text(task.title ?? "No Title")
                                     .font(.headline)
-                                    .strikethrough(task.isCompleted) // Добавим зачеркивание для выполненных задач
+                                    .strikethrough(task.isCompleted)
                                 Text(task.taskDescription ?? "No Description")
                                     .font(.subheadline)
                                 if let createdAt = task.createdAt {
@@ -186,12 +183,10 @@ struct TasksView: View {
         return formatter.string(from: Date())
     }
 
-    // Подсчет открытых задач
     func countOpenTasks() -> Int {
         return presenter.tasks.filter { !$0.isCompleted }.count
     }
 
-    // Подсчет закрытых задач
     func countClosedTasks() -> Int {
         return presenter.tasks.filter { $0.isCompleted }.count
     }

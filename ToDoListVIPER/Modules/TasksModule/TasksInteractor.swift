@@ -10,17 +10,24 @@ import CoreData
 
 class TasksInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
+    private var hasLoadedTasksFromApi = false
     
     func fetchTasks() {
-        fetchTasksFromAPI()
+        if !hasLoadedTasksFromApi {
+            fetchTasksFromAPI()
+        } else {
+            let coreDataTasks = fetchTasksFromCoreData()
+            presenter?.tasksFetchedSuccess(tasks: coreDataTasks)
+        }
     }
-
+    
     func fetchTasksFromAPI() {
         TasksAPIService.shared.fetchTasks { [weak self] tasks in
             guard let self = self else { return }
             
             if let tasks = tasks {
                 self.saveTasksToCoreData(apiTasks: tasks)
+                self.hasLoadedTasksFromApi = true
             } else {
                 let coreDataTasks = self.fetchTasksFromCoreData()
                 self.presenter?.tasksFetchedSuccess(tasks: coreDataTasks)
@@ -38,7 +45,7 @@ class TasksInteractor: PresenterToInteractorProtocol {
             return []
         }
     }
-
+    
     func addTask(title: String, taskDescription: String) {
         DispatchQueue.main.async {
             let newTask = ToDoTaskEntity(context: CoreDataManager.shared.context)
@@ -46,13 +53,14 @@ class TasksInteractor: PresenterToInteractorProtocol {
             newTask.taskDescription = taskDescription
             newTask.isCompleted = false
             newTask.createdAt = Date()
-
+            
             CoreDataManager.shared.saveContext()
             
+            self.hasLoadedTasksFromApi = true
             self.fetchTasks()
         }
     }
-
+    
     func deleteTask(task: ToDoTaskEntity) {
         DispatchQueue.main.async {
             CoreDataManager.shared.context.delete(task)
@@ -60,7 +68,7 @@ class TasksInteractor: PresenterToInteractorProtocol {
             self.fetchTasks()
         }
     }
-
+    
     func updateTask(task: ToDoTaskEntity, title: String, taskDescription: String, isCompleted: Bool) {
         DispatchQueue.main.async {
             task.title = title
@@ -70,7 +78,7 @@ class TasksInteractor: PresenterToInteractorProtocol {
             self.fetchTasks()
         }
     }
-
+    
     private func saveTasksToCoreData(apiTasks: [ToDoItem]) {
         apiTasks.forEach { apiTask in
             let newTask = ToDoTaskEntity(context: CoreDataManager.shared.context)
@@ -78,7 +86,7 @@ class TasksInteractor: PresenterToInteractorProtocol {
             newTask.title = apiTask.todo
             newTask.isCompleted = apiTask.completed
             newTask.createdAt = Date()
-
+            
             do {
                 try CoreDataManager.shared.context.save()
                 DispatchQueue.main.async {
