@@ -3,8 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		8E6F8DC32CA44CAF001E84FA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DA92CA44CAF001E84FA /* CoreDataManager.swift */; };
+		8E6F8DC42CA44CAF001E84FA /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DAA2CA44CAF001E84FA /* PersistenceController.swift */; };
+		8E6F8DC52CA44CAF001E84FA /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DAC2CA44CAF001E84FA /* TasksDataModel.xcdatamodeld */; };
+		8E6F8DC62CA44CAF001E84FA /* ToDoTaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DAD2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataClass.swift */; };
+		8E6F8DC72CA44CAF001E84FA /* ToDoTaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DAE2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataProperties.swift */; };
+		8E6F8DC82CA44CAF001E84FA /* TasksAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB22CA44CAF001E84FA /* TasksAPIService.swift */; };
+		8E6F8DC92CA44CAF001E84FA /* TasksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB42CA44CAF001E84FA /* TasksInteractor.swift */; };
+		8E6F8DCA2CA44CAF001E84FA /* TasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB52CA44CAF001E84FA /* TasksPresenter.swift */; };
+		8E6F8DCB2CA44CAF001E84FA /* TasksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB62CA44CAF001E84FA /* TasksProtocols.swift */; };
+		8E6F8DCC2CA44CAF001E84FA /* TasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB72CA44CAF001E84FA /* TasksRouter.swift */; };
+		8E6F8DCD2CA44CAF001E84FA /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB82CA44CAF001E84FA /* TasksView.swift */; };
+		8E6F8DCE2CA44CAF001E84FA /* TasksViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DBE2CA44CAF001E84FA /* TasksViewWrapper.swift */; };
+		8E6F8DCF2CA44CAF001E84FA /* ToDoListVIPERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DC02CA44CAF001E84FA /* ToDoListVIPERApp.swift */; };
+		8E6F8DD02CA44CAF001E84FA /* ToDoViper.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6F8DB02CA44CAF001E84FA /* ToDoViper.png */; };
+		8E6F8DD12CA44CAF001E84FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6F8DBB2CA44CAF001E84FA /* Preview Assets.xcassets */; };
+		8E6F8DD22CA44CAF001E84FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6F8DBD2CA44CAF001E84FA /* Assets.xcassets */; };
+		8E6F8DD52CA44CB5001E84FA /* ToDoListVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DD32CA44CB5001E84FA /* ToDoListVIPERTests.swift */; };
+		8E6F8DD92CA44CB9001E84FA /* ToDoListVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DD62CA44CB9001E84FA /* ToDoListVIPERUITests.swift */; };
+		8E6F8DDA2CA44CB9001E84FA /* ToDoListVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F8DD72CA44CB9001E84FA /* ToDoListVIPERUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8EF40BFC2C99852F00B81893 /* PBXContainerItemProxy */ = {
@@ -24,28 +46,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E6F8DA92CA44CAF001E84FA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8E6F8DAA2CA44CAF001E84FA /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		8E6F8DAD2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoTaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E6F8DAE2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoTaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E6F8DB02CA44CAF001E84FA /* ToDoViper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToDoViper.png; sourceTree = "<group>"; };
+		8E6F8DB22CA44CAF001E84FA /* TasksAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksAPIService.swift; sourceTree = "<group>"; };
+		8E6F8DB42CA44CAF001E84FA /* TasksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksInteractor.swift; sourceTree = "<group>"; };
+		8E6F8DB52CA44CAF001E84FA /* TasksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksPresenter.swift; sourceTree = "<group>"; };
+		8E6F8DB62CA44CAF001E84FA /* TasksProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksProtocols.swift; sourceTree = "<group>"; };
+		8E6F8DB72CA44CAF001E84FA /* TasksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRouter.swift; sourceTree = "<group>"; };
+		8E6F8DB82CA44CAF001E84FA /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		8E6F8DBB2CA44CAF001E84FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E6F8DBD2CA44CAF001E84FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E6F8DBE2CA44CAF001E84FA /* TasksViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewWrapper.swift; sourceTree = "<group>"; };
+		8E6F8DBF2CA44CAF001E84FA /* ToDoListVIPER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoListVIPER.entitlements; sourceTree = "<group>"; };
+		8E6F8DC02CA44CAF001E84FA /* ToDoListVIPERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVIPERApp.swift; sourceTree = "<group>"; };
+		8E6F8DC22CA44CAF001E84FA /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
+		8E6F8DD32CA44CB5001E84FA /* ToDoListVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVIPERTests.swift; sourceTree = "<group>"; };
+		8E6F8DD62CA44CB9001E84FA /* ToDoListVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVIPERUITests.swift; sourceTree = "<group>"; };
+		8E6F8DD72CA44CB9001E84FA /* ToDoListVIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8EF40BE52C99852C00B81893 /* ToDoListVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF40BFB2C99852F00B81893 /* ToDoListVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF40C052C99852F00B81893 /* ToDoListVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8EF40BE72C99852C00B81893 /* ToDoListVIPER */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoListVIPER;
-			sourceTree = "<group>";
-		};
-		8EF40BFE2C99852F00B81893 /* ToDoListVIPERTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoListVIPERTests;
-			sourceTree = "<group>";
-		};
-		8EF40C082C99852F00B81893 /* ToDoListVIPERUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoListVIPERUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8EF40BE22C99852C00B81893 /* Frameworks */ = {
@@ -72,12 +96,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6F8DAB2CA44CAF001E84FA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DA92CA44CAF001E84FA /* CoreDataManager.swift */,
+				8E6F8DAA2CA44CAF001E84FA /* PersistenceController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8E6F8DAF2CA44CAF001E84FA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DAC2CA44CAF001E84FA /* TasksDataModel.xcdatamodeld */,
+				8E6F8DAD2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataClass.swift */,
+				8E6F8DAE2CA44CAF001E84FA /* ToDoTaskEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8E6F8DB12CA44CAF001E84FA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DB02CA44CAF001E84FA /* ToDoViper.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8E6F8DB32CA44CAF001E84FA /* NetworkModule */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DB22CA44CAF001E84FA /* TasksAPIService.swift */,
+			);
+			path = NetworkModule;
+			sourceTree = "<group>";
+		};
+		8E6F8DB92CA44CAF001E84FA /* TasksModule */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DB42CA44CAF001E84FA /* TasksInteractor.swift */,
+				8E6F8DB52CA44CAF001E84FA /* TasksPresenter.swift */,
+				8E6F8DB62CA44CAF001E84FA /* TasksProtocols.swift */,
+				8E6F8DB72CA44CAF001E84FA /* TasksRouter.swift */,
+				8E6F8DB82CA44CAF001E84FA /* TasksView.swift */,
+			);
+			path = TasksModule;
+			sourceTree = "<group>";
+		};
+		8E6F8DBA2CA44CAF001E84FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DB32CA44CAF001E84FA /* NetworkModule */,
+				8E6F8DB92CA44CAF001E84FA /* TasksModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8E6F8DBC2CA44CAF001E84FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DBB2CA44CAF001E84FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E6F8DC12CA44CAF001E84FA /* ToDoListVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DAB2CA44CAF001E84FA /* CoreData */,
+				8E6F8DAF2CA44CAF001E84FA /* Entities */,
+				8E6F8DB12CA44CAF001E84FA /* Images */,
+				8E6F8DBA2CA44CAF001E84FA /* Modules */,
+				8E6F8DBC2CA44CAF001E84FA /* Preview Content */,
+				8E6F8DBD2CA44CAF001E84FA /* Assets.xcassets */,
+				8E6F8DBE2CA44CAF001E84FA /* TasksViewWrapper.swift */,
+				8E6F8DBF2CA44CAF001E84FA /* ToDoListVIPER.entitlements */,
+				8E6F8DC02CA44CAF001E84FA /* ToDoListVIPERApp.swift */,
+			);
+			path = ToDoListVIPER;
+			sourceTree = "<group>";
+		};
+		8E6F8DD42CA44CB5001E84FA /* ToDoListVIPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DD32CA44CB5001E84FA /* ToDoListVIPERTests.swift */,
+			);
+			path = ToDoListVIPERTests;
+			sourceTree = "<group>";
+		};
+		8E6F8DD82CA44CB9001E84FA /* ToDoListVIPERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F8DD62CA44CB9001E84FA /* ToDoListVIPERUITests.swift */,
+				8E6F8DD72CA44CB9001E84FA /* ToDoListVIPERUITestsLaunchTests.swift */,
+			);
+			path = ToDoListVIPERUITests;
+			sourceTree = "<group>";
+		};
 		8EF40BDC2C99852C00B81893 = {
 			isa = PBXGroup;
 			children = (
-				8EF40BE72C99852C00B81893 /* ToDoListVIPER */,
-				8EF40BFE2C99852F00B81893 /* ToDoListVIPERTests */,
-				8EF40C082C99852F00B81893 /* ToDoListVIPERUITests */,
+				8E6F8DC12CA44CAF001E84FA /* ToDoListVIPER */,
+				8E6F8DD42CA44CB5001E84FA /* ToDoListVIPERTests */,
+				8E6F8DD82CA44CB9001E84FA /* ToDoListVIPERUITests */,
 				8EF40BE62C99852C00B81893 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +228,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				8EF40BE72C99852C00B81893 /* ToDoListVIPER */,
-			);
 			name = ToDoListVIPER;
 			packageProductDependencies = (
 			);
@@ -130,9 +248,6 @@
 			dependencies = (
 				8EF40BFD2C99852F00B81893 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				8EF40BFE2C99852F00B81893 /* ToDoListVIPERTests */,
-			);
 			name = ToDoListVIPERTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +267,6 @@
 			);
 			dependencies = (
 				8EF40C072C99852F00B81893 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8EF40C082C99852F00B81893 /* ToDoListVIPERUITests */,
 			);
 			name = ToDoListVIPERUITests;
 			packageProductDependencies = (
@@ -187,6 +299,7 @@
 				};
 			};
 			buildConfigurationList = 8EF40BE02C99852C00B81893 /* Build configuration list for PBXProject "ToDoListVIPER" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -196,7 +309,6 @@
 			);
 			mainGroup = 8EF40BDC2C99852C00B81893;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 8EF40BE62C99852C00B81893 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,6 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F8DD02CA44CAF001E84FA /* ToDoViper.png in Resources */,
+				8E6F8DD12CA44CAF001E84FA /* Preview Assets.xcassets in Resources */,
+				8E6F8DD22CA44CAF001E84FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +352,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F8DC32CA44CAF001E84FA /* CoreDataManager.swift in Sources */,
+				8E6F8DC42CA44CAF001E84FA /* PersistenceController.swift in Sources */,
+				8E6F8DC52CA44CAF001E84FA /* TasksDataModel.xcdatamodeld in Sources */,
+				8E6F8DC62CA44CAF001E84FA /* ToDoTaskEntity+CoreDataClass.swift in Sources */,
+				8E6F8DC72CA44CAF001E84FA /* ToDoTaskEntity+CoreDataProperties.swift in Sources */,
+				8E6F8DC82CA44CAF001E84FA /* TasksAPIService.swift in Sources */,
+				8E6F8DC92CA44CAF001E84FA /* TasksInteractor.swift in Sources */,
+				8E6F8DCA2CA44CAF001E84FA /* TasksPresenter.swift in Sources */,
+				8E6F8DCB2CA44CAF001E84FA /* TasksProtocols.swift in Sources */,
+				8E6F8DCC2CA44CAF001E84FA /* TasksRouter.swift in Sources */,
+				8E6F8DCD2CA44CAF001E84FA /* TasksView.swift in Sources */,
+				8E6F8DCE2CA44CAF001E84FA /* TasksViewWrapper.swift in Sources */,
+				8E6F8DCF2CA44CAF001E84FA /* ToDoListVIPERApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F8DD52CA44CB5001E84FA /* ToDoListVIPERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +380,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F8DD92CA44CB9001E84FA /* ToDoListVIPERUITests.swift in Sources */,
+				8E6F8DDA2CA44CB9001E84FA /* ToDoListVIPERUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +729,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E6F8DAC2CA44CAF001E84FA /* TasksDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E6F8DC22CA44CAF001E84FA /* TasksDataModel.xcdatamodel */,
+			);
+			currentVersion = 8E6F8DC22CA44CAF001E84FA /* TasksDataModel.xcdatamodel */;
+			path = TasksDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8EF40BDD2C99852C00B81893 /* Project object */;
 }
